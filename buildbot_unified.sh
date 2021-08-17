@@ -69,7 +69,12 @@ repopick 289372 # Messaging: Add "Mark as read" quick action for message notific
 
 apply_patches() {
     echo "Applying patch group ${1}"
-    bash ~/treble_experimentations/apply-patches.sh ./lineage_patches_unified/${1}
+    bash ../treble_experimentations/apply-patches.sh ./lineage_patches_unified/${1}
+}
+
+apply_my_patches() {
+    echo "Applying my patch"
+    bash ../treble_experimentations/apply-patches.sh ./treble_build_floko/patches
 }
 
 prep_device() {
@@ -112,10 +117,11 @@ build_treble() {
     mv $OUT/system.img ~/build-output/FlokoROM-v4-$BUILD_DATE-UNOFFICIAL-${TARGET}$(${PERSONAL} && echo "-personal" || echo "").img
 }
 
-echo "Applying patches"
+echo "*****Applying patches*****"
 prep_${MODE}
 apply_patches patches_platform
 apply_patches patches_${MODE}
+apply_my_patches
 if ${PERSONAL}
 then
     apply_patches patches_platform_personal
