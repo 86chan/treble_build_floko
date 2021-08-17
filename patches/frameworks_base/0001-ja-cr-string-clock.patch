@@ -1,0 +1,174 @@
+From f321e8bfe6afbb921e74abd14eb4e0efd788b6dd Mon Sep 17 00:00:00 2001
+From: 
+Date: Mon, 16 Aug 2021 04:34:56 +0900
+Subject: [PATCH 1/1] ja_cr_string_clock
+
+---
+ .../SystemUI/res/values-ja-rJP/cr_strings.xml | 148 +++++++++---------
+ 1 file changed, 75 insertions(+), 73 deletions(-)
+
+diff --git a/packages/SystemUI/res/values-ja-rJP/cr_strings.xml b/packages/SystemUI/res/values-ja-rJP/cr_strings.xml
+index ae119637afc..d169b9ad8e1 100644
+--- a/packages/SystemUI/res/values-ja-rJP/cr_strings.xml
++++ b/packages/SystemUI/res/values-ja-rJP/cr_strings.xml
+@@ -97,82 +97,84 @@
+ 
+     [CHAR LIMIT=8] -->
+     <plurals name="type_clock_header">
+-        <item quantity="other"><annotation name="color">現在</annotation>\n^1\n^2</item>
++        <item quantity="other"><annotation name="color">It’s</annotation>\n^1\n^2</item>
++        <item quantity="one"><annotation name="color">It’s</annotation>\n^1\n^2</item>
++        <item quantity="few"><annotation name="color">It’s</annotation>\n^1\n^2</item>
+     </plurals>
+     <!-- Hour displayed in words on the typographic clock face. [CHAR LIMIT=12] -->
+-    <string name="text_clock_h_one">1時</string>
+-    <string name="text_clock_h_two">2時</string>
+-    <string name="text_clock_h_three">3時</string>
+-    <string name="text_clock_h_four">4時</string>
+-    <string name="text_clock_h_five">5時</string>
+-    <string name="text_clock_h_six">6時</string>
+-    <string name="text_clock_h_seven">7時</string>
+-    <string name="text_clock_h_eight">8時</string>
+-    <string name="text_clock_h_nine">9時</string>
+-    <string name="text_clock_h_ten">10時</string>
+-    <string name="text_clock_h_eleven">11時</string>
+-    <string name="text_clock_h_twelve">12時</string>
++    <string name="text_clock_h_one">One</string>
++    <string name="text_clock_h_two">Two</string>
++    <string name="text_clock_h_three">Three</string>
++    <string name="text_clock_h_four">Four</string>
++    <string name="text_clock_h_five">Five</string>
++    <string name="text_clock_h_six">Six</string>
++    <string name="text_clock_h_seven">Seven</string>
++    <string name="text_clock_h_eight">Eight</string>
++    <string name="text_clock_h_nine">Nine</string>
++    <string name="text_clock_h_ten">Ten</string>
++    <string name="text_clock_h_eleven">Eleven</string>
++    <string name="text_clock_h_twelve">Twelve</string>
+     <!-- Minutes displayed in words on the typographic clock face. [CHAR LIMIT=20] -->
+-    <string name="text_clock_m_zero">ちょうど</string>
+-    <string name="text_clock_m_one">1分</string>
+-    <string name="text_clock_m_two">2分</string>
+-    <string name="text_clock_m_three">3分</string>
+-    <string name="text_clock_m_four">4分</string>
+-    <string name="text_clock_m_five">5分</string>
+-    <string name="text_clock_m_six">6分</string>
+-    <string name="text_clock_m_seven">7分</string>
+-    <string name="text_clock_m_eight">8分</string>
+-    <string name="text_clock_m_nine">9分</string>
+-    <string name="text_clock_m_ten">10分</string>
+-    <string name="text_clock_m_eleven">11分</string>
+-    <string name="text_clock_m_twelve">12分</string>
+-    <string name="text_clock_m_thirteen">13分</string>
+-    <string name="text_clock_m_fourteen">14分</string>
+-    <string name="text_clock_m_fifteen">15分</string>
+-    <string name="text_clock_m_sixteen">16分</string>
+-    <string name="text_clock_m_seventeen">17分</string>
+-    <string name="text_clock_m_eighteen">18分</string>
+-    <string name="text_clock_m_nineteen">19分</string>
+-    <string name="text_clock_m_twenty">20分</string>
+-    <string name="text_clock_m_twenty_one">21分</string>
+-    <string name="text_clock_m_twenty_two">22分</string>
+-    <string name="text_clock_m_twenty_three">23分</string>
+-    <string name="text_clock_m_twenty_four">24分</string>
+-    <string name="text_clock_m_twenty_five">25分</string>
+-    <string name="text_clock_m_twenty_six">26分</string>
+-    <string name="text_clock_m_twenty_seven">27分</string>
+-    <string name="text_clock_m_twenty_eight">28分</string>
+-    <string name="text_clock_m_twenty_nine">29分</string>
+-    <string name="text_clock_m_thirty">30分</string>
+-    <string name="text_clock_m_thirty_one">31分</string>
+-    <string name="text_clock_m_thirty_two">32分</string>
+-    <string name="text_clock_m_thirty_three">33分</string>
+-    <string name="text_clock_m_thirty_four">34分</string>
+-    <string name="text_clock_m_thirty_five">35分</string>
+-    <string name="text_clock_m_thirty_six">36分</string>
+-    <string name="text_clock_m_thirty_seven">37分</string>
+-    <string name="text_clock_m_thirty_eight">38分</string>
+-    <string name="text_clock_m_thirty_nine">39分</string>
+-    <string name="text_clock_m_forty">40分</string>
+-    <string name="text_clock_m_forty_one">41分</string>
+-    <string name="text_clock_m_forty_two">42分</string>
+-    <string name="text_clock_m_forty_three">43分</string>
+-    <string name="text_clock_m_forty_four">44分</string>
+-    <string name="text_clock_m_forty_five">45分</string>
+-    <string name="text_clock_m_forty_six">46分</string>
+-    <string name="text_clock_m_forty_seven">47分</string>
+-    <string name="text_clock_m_forty_eight">48分</string>
+-    <string name="text_clock_m_forty_nine">49分</string>
+-    <string name="text_clock_m_fifty">50分</string>
+-    <string name="text_clock_m_fifty_one">51分</string>
+-    <string name="text_clock_m_fifty_two">52分</string>
+-    <string name="text_clock_m_fifty_three">53分</string>
+-    <string name="text_clock_m_fifty_four">54分</string>
+-    <string name="text_clock_m_fifty_five">55分</string>
+-    <string name="text_clock_m_fifty_six">56分</string>
+-    <string name="text_clock_m_fifty_seven">57分</string>
+-    <string name="text_clock_m_fifty_eight">58分</string>
+-    <string name="text_clock_m_fifty_nine">59分</string>
++    <string name="text_clock_m_zero">O’Clock</string>
++    <string name="text_clock_m_one">O’One</string>
++    <string name="text_clock_m_two">O’Two</string>
++    <string name="text_clock_m_three">O’Three</string>
++    <string name="text_clock_m_four">O’Four</string>
++    <string name="text_clock_m_five">O’Five</string>
++    <string name="text_clock_m_six">O’Six</string>
++    <string name="text_clock_m_seven">O’Seven</string>
++    <string name="text_clock_m_eight">O’Eight</string>
++    <string name="text_clock_m_nine">O’Nine</string>
++    <string name="text_clock_m_ten">Ten</string>
++    <string name="text_clock_m_eleven">Eleven</string>
++    <string name="text_clock_m_twelve">Twelve</string>
++    <string name="text_clock_m_thirteen">Thirteen</string>
++    <string name="text_clock_m_fourteen">Fourteen</string>
++    <string name="text_clock_m_fifteen">Fifteen</string>
++    <string name="text_clock_m_sixteen">Sixteen</string>
++    <string name="text_clock_m_seventeen">Seventeen</string>
++    <string name="text_clock_m_eighteen">Eighteen</string>
++    <string name="text_clock_m_nineteen">Nineteen</string>
++    <string name="text_clock_m_twenty">Twenty</string>
++    <string name="text_clock_m_twenty_one">Twenty\nOne</string>
++    <string name="text_clock_m_twenty_two">Twenty\nTwo</string>
++    <string name="text_clock_m_twenty_three">Twenty\nThree</string>
++    <string name="text_clock_m_twenty_four">Twenty\nFour</string>
++    <string name="text_clock_m_twenty_five">Twenty\nFive</string>
++    <string name="text_clock_m_twenty_six">Twenty\nSix</string>
++    <string name="text_clock_m_twenty_seven">Twenty\nSeven</string>
++    <string name="text_clock_m_twenty_eight">Twenty\nEight</string>
++    <string name="text_clock_m_twenty_nine">Twenty\nNine</string>
++    <string name="text_clock_m_thirty">Thirty</string>
++    <string name="text_clock_m_thirty_one">Thirty\nOne</string>
++    <string name="text_clock_m_thirty_two">Thirty\nTwo</string>
++    <string name="text_clock_m_thirty_three">Thirty\nThree</string>
++    <string name="text_clock_m_thirty_four">Thirty\nFour</string>
++    <string name="text_clock_m_thirty_five">Thirty\nFive</string>
++    <string name="text_clock_m_thirty_six">Thirty\nSix</string>
++    <string name="text_clock_m_thirty_seven">Thirty\nSeven</string>
++    <string name="text_clock_m_thirty_eight">Thirty\nEight</string>
++    <string name="text_clock_m_thirty_nine">Thirty\nNine</string>
++    <string name="text_clock_m_forty">Forty</string>
++    <string name="text_clock_m_forty_one">Forty\nOne</string>
++    <string name="text_clock_m_forty_two">Forty\nTwo</string>
++    <string name="text_clock_m_forty_three">Forty\nThree</string>
++    <string name="text_clock_m_forty_four">Forty\nFour</string>
++    <string name="text_clock_m_forty_five">Forty\nFive</string>
++    <string name="text_clock_m_forty_six">Forty\nSix</string>
++    <string name="text_clock_m_forty_seven">Forty\nSeven</string>
++    <string name="text_clock_m_forty_eight">Forty\nEight</string>
++    <string name="text_clock_m_forty_nine">Forty\nNine</string>
++    <string name="text_clock_m_fifty">Fifty</string>
++    <string name="text_clock_m_fifty_one">Fifty\nOne</string>
++    <string name="text_clock_m_fifty_two">Fifty\nTwo</string>
++    <string name="text_clock_m_fifty_three">Fifty\nThree</string>
++    <string name="text_clock_m_fifty_four">Fifty\nFour</string>
++    <string name="text_clock_m_fifty_five">Fifty\nFive</string>
++    <string name="text_clock_m_fifty_six">Fifty\nSix</string>
++    <string name="text_clock_m_fifty_seven">Fifty\nSeven</string>
++    <string name="text_clock_m_fifty_eight">Fifty\nEight</string>
++    <string name="text_clock_m_fifty_nine">Fifty\nNine</string>
+     <!-- Binary clock -->
+     <!-- Samsung clock -->
+     <!-- Tux clock -->
+-- 
+2.25.1
+
