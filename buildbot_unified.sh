@@ -35,14 +35,14 @@ then
 fi
 
 # Abort early on error
-set -eE
-trap '(\
-echo;\
-echo \!\!\! An error happened during script execution;\
-echo \!\!\! Please check console output for bad sync,;\
-echo \!\!\! failed patch application, etc.;\
-echo\
-)' ERR
+#set -eE
+#trap '(\
+#echo;\
+#echo \!\!\! An error happened during script execution;\
+#echo \!\!\! Please check console output for bad sync,;\
+#echo \!\!\! failed patch application, etc.;\
+#echo\
+#)' ERR
 
 START=`date +%s`
 BUILD_DATE="$(date +%Y%m%d)"
@@ -51,6 +51,10 @@ WITH_SU=false
 
 echo "Preparing local manifests"
 mkdir -p .repo/local_manifests
+if [ ${MODE} == "device" ]
+then
+    rm -rf .repo/local_manifests/manifest.xml
+fi
 cp ./treble_build_floko/local_manifests_${MODE}/*.xml .repo/local_manifests
 echo ""
 
@@ -115,15 +119,18 @@ build_treble() {
     mv $OUT/system.img ~/build-output/FlokoROM-v4-$BUILD_DATE-UNOFFICIAL-${TARGET}$(${PERSONAL} && echo "-personal" || echo "").img
 }
 
-echo "*****Applying patches*****"
-prep_${MODE}
-apply_patches patches_platform
-apply_patches patches_${MODE}
-apply_my_patches
-if ${PERSONAL}
+if [ ${MODE} != "device" ]
 then
-    apply_patches patches_platform_personal
-    apply_patches patches_${MODE}_personal
+    echo "*****Applying patches*****"
+    prep_${MODE}
+    apply_patches patches_platform
+    apply_patches patches_${MODE}
+    apply_my_patches
+    if ${PERSONAL}
+    then
+        apply_patches patches_platform_personal
+        apply_patches patches_${MODE}_personal
+    fi
 fi
 finalize_${MODE}
 echo ""
