@@ -7,6 +7,10 @@ First, open a new Terminal window, which defaults to your home directory.  Clone
 
     git clone https://github.com/AndyCGYan/treble_experimentations
 
+Hint ! If you want to use this customized repository:
+
+    git clone https://github.com/AndyCGYan/treble_experimentations
+
 Create a new working directory for your FlokoROM build and navigate to it:
 
     mkdir floko-gsi; cd floko-gsi
@@ -19,6 +23,12 @@ Clone both this and the patches repos:
 
     git clone https://github.com/FlokoROM-GSI/treble_build_floko -b 11.0-unified
     git clone https://github.com/FlokoROM-GSI/lineage_patches_unified -b 11.0-unified
+
+Hint ! If you want to use this customized repository:
+
+    git clone https://github.com/86chan/treble_build_floko.git -b 11.0
+    git clone https://github.com/FlokoROM-GSI/lineage_patches_unified -b 11.0-unified
+
 
 Finally, start the build script - for example, to build for all supported archs:
 
