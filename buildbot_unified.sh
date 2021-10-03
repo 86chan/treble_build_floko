@@ -66,8 +66,6 @@ echo ""
 
 echo "Setting up build environment"
 source build/envsetup.sh &> /dev/null
-pwd
-exit
 mkdir -p $BUILD_OUT
 echo ""
 
