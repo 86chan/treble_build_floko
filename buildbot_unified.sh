@@ -13,6 +13,8 @@ export SOONG_ALLOW_MISSING_DEPENDENCIES=true
 export CCACHE_DIR=~/ccache
 export USE_CCACHE=1
 
+BUILD_OUT=../build-output
+
 if [ $# -lt 2 ]
 then
     echo "Not enough arguments - exiting"
@@ -64,7 +66,9 @@ echo ""
 
 echo "Setting up build environment"
 source build/envsetup.sh &> /dev/null
-mkdir -p ~/build-output
+pwd
+exit
+mkdir -p $BUILD_OUT
 echo ""
 
 rm -rf vendor/seedvault/
@@ -102,7 +106,7 @@ finalize_treble() {
 
 build_device() {
     brunch ${1}
-    mv $OUT/FlokoROM-*.zip ~/build-output/FlokoROM-v4-$BUILD_DATE-UNOFFICIAL-${1}$($PERSONAL && echo "-personal" || echo "").zip
+    mv $OUT/FlokoROM-*.zip $BUILD_OUT/FlokoROM-v4-$BUILD_DATE-UNOFFICIAL-${1}$($PERSONAL && echo "-personal" || echo "").zip
 }
 
 build_treble() {
@@ -116,7 +120,7 @@ build_treble() {
     make installclean
     make -j$(nproc --all) systemimage
     make vndk-test-sepolicy
-    mv $OUT/system.img ~/build-output/FlokoROM-v4-$BUILD_DATE-UNOFFICIAL-${TARGET}$(${PERSONAL} && echo "-personal" || echo "").img
+    mv $OUT/system.img $BUILD_OUT/FlokoROM-v4-$BUILD_DATE-UNOFFICIAL-${TARGET}$(${PERSONAL} && echo "-personal" || echo "").img
 }
 
 if [ ${MODE} != "device" ]
@@ -144,7 +148,7 @@ do
     echo "Starting $(${PERSONAL} && echo "personal " || echo "")build for ${MODE} ${var}"
     build_${MODE} ${var}
 done
-ls ~/build-output | grep 'lineage' || true
+ls $BUILD_OUT | grep 'lineage' || true
 
 END=`date +%s`
 ELAPSEDM=$(($(($END-$START))/60))
